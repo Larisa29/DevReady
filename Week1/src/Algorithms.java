@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import static java.lang.Math.*;
 
@@ -68,5 +67,62 @@ public class Algorithms {
         }
 
         return isFactorial(n, current+1, factorial * (current+1));
+    }
+
+    //https://edabit.com/challenge/qSJ5hZfG52Nf2hXWS
+    public static int largestGap(int[] numbers) {
+        int maxGap = -1;
+        Arrays.sort(numbers);
+
+        for (int i=1; i<numbers.length; i++){
+            if (numbers[i] - numbers[i-1] > maxGap){
+                maxGap = numbers[i] - numbers[i-1];
+            }
+        }
+
+        System.out.println("MaxGap: " + maxGap);
+
+        return maxGap;
+    }
+
+
+    //https://edabit.com/challenge/NXTrfGBXTKg3Z9jkz
+    public static boolean isPandigital(long num) {
+        List<Integer> allDigits = new ArrayList<>();
+        while (num > 0){
+            allDigits.add(0, (int) (num%10));
+            num/=10;
+        }
+
+        Set<Integer> setDigits = new HashSet<>(allDigits);
+        for (int i = 0; i <= 9; i++) {
+            if (!setDigits.contains(i)) {
+                System.out.println("FALSE");
+                return false;
+            }
+        }
+        System.out.println("TRUE");
+        return true;
+    }
+
+    //https://edabit.com/challenge/eCPim4XcssdZdvs32
+    public static String[] numInStr(String[] arr) {
+        List<String> result = new ArrayList<>();
+
+        for (String str : arr) {
+            if (str.matches(".*\\d.*")) {
+                result.add(str);
+            }
+        }
+
+        String[] outputArray = new String[result.size()];
+        for (int i = 0; i < result.size(); i++) {
+            outputArray[i] = result.get(i);
+        }
+
+        for (String s: outputArray){
+            System.out.println(s);
+        }
+        return outputArray;
     }
 }

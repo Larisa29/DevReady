@@ -59,5 +59,27 @@ public class Main {
         System.out.println("-----------------------------5 ----------------------");
         Algorithms.isFactorial(24,1,1); //mereu 1 si 1 pt ultimele 2 args
         Algorithms.isFactorial(120,1,1);
+
+        //6
+        System.out.println("-----------------------------6 ----------------------");
+        int[] numbers = new int[] {4,1,6,9,3};
+        Algorithms.largestGap(numbers);
+        numbers = new int[] {9, 4, 26, 26, 0, 0, 5, 20, 6, 25, 5};
+        Algorithms.largestGap(numbers);
+
+        numbers = new int[] {14, 13, 7, 1, 4, 12, 3, 7, 7, 12, 11, 5, 7};
+        Algorithms.largestGap(numbers);
+
+        numbers = new int[] {13, 3, 8, 5, 5, 2, 13, 6, 14, 2, 11, 4, 10, 8, 1, 9};
+        Algorithms.largestGap(numbers);
+
+        //7
+        System.out.println("-----------------------------7 ----------------------");
+        Algorithms.isPandigital(981407235);
+
+        //8
+        System.out.println("-----------------------------8 ----------------------");
+        String[] input = {"abc", "ab10c", "a10bc", "bcd", "test one"};
+        Algorithms.numInStr(input);
     }
 }
