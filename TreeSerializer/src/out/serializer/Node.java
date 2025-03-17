@@ -5,7 +5,7 @@ class Node {
     Node left, right;
 
     Node(int value) {
-        if(value< 0){
+        if(value < 0){
             throw new IllegalArgumentException("The tree cannot contain values smaller than 0");
         }
         this.value = value;
