@@ -25,10 +25,11 @@ public class Game {
             int randomChance = random.nextInt(100) + 1;
             System.out.println("(RANDOM) Chance to hit the enemy: " + randomChance);
             if (atacker == 1) {
+                player1.getWeapon().useWeapon();
                 System.out.println("The actual chance to hit with player1's weapon is " + player1.getWeapon().getProbability());
                 if (randomChance <= player1.getWeapon().getProbability()) {
-                    System.out.println("You struck him straight in the heart! The remaining life score for player2 is: " + player2.getLifeScore() + "-" + player1.getWeapon().getDamage() + " =" + (player2.getLifeScore() - player1.getWeapon().getDamage()));
                     currentLifeScore = player2.getLifeScore() - player1.getWeapon().getDamage();
+                    System.out.println("You struck him straight in the heart! The remaining life score for player2 is: " + player2.getLifeScore() + "-" + player1.getWeapon().getDamage() + " =" + currentLifeScore);
 
                     //if the value is less than 0, then set it to 0
                     player2.setLifeScore(Math.max(0, currentLifeScore));
@@ -36,10 +37,11 @@ public class Game {
                     System.out.println("You missed..maybe next time you'll hit the opponent");
                 }
             } else {
+                player2.getWeapon().useWeapon();
                 System.out.println("The actual chance to hit with player2's weapon is " + player2.getWeapon().getProbability());
                 if (randomChance <= player2.getWeapon().getProbability()) {
-                    System.out.println("You struck him straight in the heart! The remaining life score for player1 is: " + player1.getLifeScore() + "-" + player2.getWeapon().getDamage() + " =" + (player1.getLifeScore() - player2.getWeapon().getDamage()));
                     currentLifeScore = player1.getLifeScore() - player2.getWeapon().getDamage();
+                    System.out.println("You struck him straight in the heart! The remaining life score for player1 is: " + player1.getLifeScore() + "-" + player2.getWeapon().getDamage() + " =" + currentLifeScore);
 
                     player1.setLifeScore(Math.max(0, currentLifeScore));
                 } else {
