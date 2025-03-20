@@ -5,8 +5,6 @@
 // pistol(20, 50%), ak47(50, 20%). La fiecare runda jucatorul poate selecta alta arma
 //la final, trebuie afisat numele jucatorului castigator si viata cu care a ramas
 
-import javax.imageio.plugins.tiff.BaselineTIFFTagSet;
-
 public class Main {
     public static void main(String[] args) {
         Player player1 = new Player();
@@ -19,7 +17,7 @@ public class Main {
         player2.setName();
         //player2.chooseWeapon();
 
-        Game battleGame  = new Game(player1, player2);
+        Game battleGame = new Game(player1, player2);
         battleGame.chooseWeapon(player1);
         battleGame.chooseWeapon(player2);
 

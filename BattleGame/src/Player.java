@@ -14,11 +14,11 @@ public class Player {
         return this.userName;
     }
 
-    public int getLifeScore(){
+    public int getLifeScore() {
         return this.lifeScore;
     }
 
-    public void setLifeScore(int newScore){
+    public void setLifeScore(int newScore) {
         this.lifeScore = newScore;
     }
 
@@ -53,7 +53,7 @@ public class Player {
 //        } catch (IllegalArgumentException e) {
 //            return false;
 //        }
-    }
+}
 
 
 
