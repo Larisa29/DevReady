@@ -10,17 +10,14 @@ public class Main {
         Player player1 = new Player();
         System.out.println("Enter the username for PLAYER 1: ");
         player1.setName();
-        //player1.chooseWeapon();
+        player1.chooseWeapon();
 
         Player player2 = new Player();
         System.out.println("Enter the username for PLAYER 2: ");
         player2.setName();
-        //player2.chooseWeapon();
+        player2.chooseWeapon();
 
         Game battleGame = new Game(player1, player2);
-        battleGame.chooseWeapon(player1);
-        battleGame.chooseWeapon(player2);
-
         battleGame.startRound();
     }
 }

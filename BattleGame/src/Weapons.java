@@ -23,4 +23,13 @@ public enum Weapons {
     public int getDamage() {
         return this.damage;
     }
+
+    public static boolean isValidWeapon(String weapon) {
+        try {
+            Weapons.valueOf(weapon);
+            return true;
+        } catch (IllegalArgumentException e) {
+            return false;
+        }
+    }
 }
