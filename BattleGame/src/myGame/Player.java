@@ -1,13 +1,25 @@
+package myGame;
+
 import java.util.Scanner;
 
 public class Player {
     private int lifeScore = 100;
     private String userName;
     private Weapons weapon;
+    private Scanner scanner;
+
+    public Player(Scanner scanner){
+        this.scanner = scanner;
+    }
 
     public void setName() {
-        Scanner myObj = new Scanner(System.in);
-        this.userName = myObj.nextLine();
+        String inputName="";
+        while (inputName.isEmpty())
+        {
+            System.out.println("Enter a valid name..");
+            inputName = scanner.nextLine().trim();
+        }
+        this.userName = inputName;
     }
 
     public String getUserName() {
@@ -34,8 +46,7 @@ public class Player {
         String weapon = "";
         while (!Weapons.isValidWeapon(weapon)) {
             System.out.println("\nYou have to read a weapon from the given list..  ");
-            Scanner myObj = new Scanner(System.in);
-            weapon = myObj.nextLine();
+            weapon = scanner.nextLine();
         }
         this.weapon = Weapons.valueOf(weapon);
     }

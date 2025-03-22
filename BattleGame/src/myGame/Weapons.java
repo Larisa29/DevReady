@@ -1,3 +1,5 @@
+package myGame;
+
 public enum Weapons {
     PEPPER_SPRAY(5, 35) {
         @Override
