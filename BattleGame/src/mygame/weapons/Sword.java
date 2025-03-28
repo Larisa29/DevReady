@@ -2,7 +2,7 @@ package mygame.weapons;
 
 class Sword extends Weapon {
     Sword() {
-        super(45, 78);
+        super(45, 78, new RandomHitDetection());
     }
 
     @Override

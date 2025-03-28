@@ -22,6 +22,10 @@ public class Player {
         return this.lifeScore;
     }
 
+    public Weapon getWeapon(){
+        return this.weapon;
+    }
+
     public void attack(Player enemy) {
         System.out.println("Current atacker: " + this.userName);
         System.out.println("The actual chance to hit with attacker's weapon is " + this.weapon.getProbability());

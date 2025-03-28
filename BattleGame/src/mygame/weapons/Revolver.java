@@ -2,7 +2,7 @@ package mygame.weapons;
 
 class Revolver extends Weapon{
     Revolver() {
-        super(45, 25);
+        super(45, 25, new RandomHitDetection());
     }
 
     @Override

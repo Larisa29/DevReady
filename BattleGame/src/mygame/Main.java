@@ -7,11 +7,7 @@ package mygame;
 //la final, trebuie afisat numele jucatorului castigator si viata cu care a ramas
 
 import mygame.player.KeyboardPlayerInputReader;
-import mygame.player.Player;
-import mygame.player.PlayerBuilder;
 import mygame.player.PlayerInputReader;
-
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {

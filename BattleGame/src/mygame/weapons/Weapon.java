@@ -1,15 +1,16 @@
 package mygame.weapons;
 
 import java.util.Objects;
-import java.util.Random;
 
 public abstract class Weapon {
     private int damage;
     private int probability;
+    private final RandomHitDetection hitDetection;
 
-    Weapon(int damage, int probability) {
+    protected Weapon(int damage, int probability, RandomHitDetection hitDetection) {
         this.damage = damage;
         this.probability = probability;
+        this.hitDetection = hitDetection;
     }
 
     public int getProbability() {
@@ -20,12 +21,9 @@ public abstract class Weapon {
         return this.damage;
     }
 
+    //I can establish in different ways if there is a hit -> hitDetection
     public boolean isAHit() {
-        Random random = new Random();
-        int randomChance = random.nextInt(100) + 1;
-        System.out.println("(RANDOM) Chance to hit the enemy: " + randomChance);
-
-        return randomChance <= this.probability;
+        return this.hitDetection.isAHit(this.probability);
     }
 
     @Override

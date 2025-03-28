@@ -4,8 +4,6 @@ import mygame.weapons.Weapon;
 import mygame.weapons.WeaponChoice;
 import mygame.weapons.WeaponFactory;
 
-import java.util.Scanner;
-
 public class PlayerBuilder {
     private final PlayerInputReader scanner;
 
